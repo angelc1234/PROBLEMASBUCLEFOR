@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css"> 
+        .estilos { text-transform: capitalize;}   
+        </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <title>Angel Gabriel Caballero</title>
+</head>
+<script>
+        for(let contador=1;contador<=15;contador++){
+    var nombre_cliente=prompt("Ingrese su Nombre Completo")
+    var compra=parseFloat(prompt("Ingrese el valor de la Compra"))
+    var modelo=prompt("Ingrese el Modelo que desea comprar: A1, A2 o A3")
+    let tarjetapuntos=prompt("Tiene tarjeta de puntos: SI o NO")
+       
+    switch(modelo){
+     case "A1": document.write(`<h1>Computadoras y Mas...</h1><br>`)
+                document.write(`<h2>Factura Cliente ${contador}</h2><br>`)
+                document.write(`<p><strong>Nombre del Cliente:</strong> ${nombre_cliente}</p><br>`)
+                document.write(`<p><strong>Modelo Comprado:</strong> ${modelo}</p><br>`)
+                document.write(`<p><strong>Descuento:</strong> ${compra*0.10}</p><br> `)
+                document.write(`<p><strong>Pagara con Tarjeta:</strong> ${tarjetapuntos}</p><br>`)
+                document.write(`<p><strong>Descuento: 10% de la compra</strong></p><br> `)
+                document.write(`<p><strong>Compra:</strong> ${compra}</p><br> `)
+                if(tarjetapuntos.toUpperCase()==="SI"){
+                document.write(`<p><strong>Descuento Tarjeta:</strong> ${compra*0.05}</p><br>`)
+                document.write(`<strong>Total a Pagar:</strong> ${(compra-(compra*0.15))} `)
+                }else if(tarjetapuntos.toUpperCase()==="NO"){
+                    document.write(`<p><strong>Descuento Tarjeta:</strong> ${0}</p><br>`)
+                    document.write(`<strong>Total a Pagar:</strong> ${compra-(compra*0.10)} `)
+                } break
+     case "A2": document.write(`<h1>Computadoras y Mas...</h1><br>`)
+                document.write(`<h2>Factura Cliente #${contador}</h2><br>`)
+                document.write(`<p><strong>Nombre del Cliente:</strong> ${nombre_cliente}</p><br>`)
+                document.write(`<p> <strong>Modelo Comprado:</strong> ${modelo}</p><br>`)
+                document.write(`<p><strong>Descuento:</strong> ${compra*0.15}</p><br> `)
+                document.write(`<p><strong>Pagara con Tarjeta:</strong> ${tarjetapuntos}</p><br>`)
+                document.write(`<p><strong>Descuento: 15% de la compra</strong></p><br> `)
+                document.write(`<p><strong>Compra:</strong> ${compra}</p><br> `)
+                if(tarjetapuntos.toUpperCase()==="SI"){
+                document.write(`<p><strong>Descuento Tarjeta:</strong> ${compra*0.05}</p><br>`)
+                document.write(`<strong>Total a Pagar:</strong> ${(compra-(compra*0.20))} `)
+                }else if(tarjetapuntos.toUpperCase()==="NO"){
+                    document.write(`<p><strong>Descuento Tarjeta:</strong> ${0}</p><br>`)
+                    document.write(`<strong>Total a Pagar:</strong> ${compra-(compra*0.15)} `)
+                } break
+               
+     case "A3": document.write(`<h1>Empresa Computadoras y Mas...</h1><br>`)
+                document.write(`<h2>Factura Cliente #${contador}</h2><br>`)
+                document.write(`<p><strong>Nombre del Cliente:</strong> ${nombre_cliente}</p><br>`)
+                document.write(`<p><strong>Modelo Comprado:</strong> ${modelo}</p><br>`)
+                document.write(`<p><strong>Compra:</strong> ${compra}</p><br> `)
+                document.write(`<p><strong>Descuento:</strong> ${compra*0.20}</p><br> `)
+                document.write(`<p><strong>Pagara con Tarjeta:</strong> ${tarjetapuntos}</p><br>`)
+                document.write(`<p><strong>Descuento: 20% de la compra</strong></p><br> `)
+                document.write(`<p><strong>Compra:</strong> ${compra}</p><br> `)
+                if(tarjetapuntos.toUpperCase()==="SI"){
+                document.write(`<p><strong>Descuento Tarjeta:</strong> ${compra*0.05}</p><br>`)
+                document.write(`<strong>Total a Pagar:</strong> ${(compra-(compra*0.25))} `)
+                }else if(tarjetapuntos.toUpperCase()==="NO"){
+                    document.write(`<p><strong>Descuento Tarjeta:</strong> ${0}</p><br>`)
+                    document.write(`<strong>Total a Pagar:</strong> ${compra-(compra*0.20)} `)
+                } break
+                default:alert(`Lo siento tu DATO no esta existe en nuestro programa <br>`)
+                break
+        }
+    }
+</script>
+<body>
+    
+</body>
+</html>
